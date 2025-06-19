@@ -1,0 +1,184 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif; /* Используем Arial или похожий шрифт */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Светлый серый фон */
+    color: #333; /* Темный текст для контраста */
+    line-height: 1.6; /* Расстояние между строками */
+}
+
+/* Контейнер  (основной блок с содержимым) */
+.container {
+    width: 80%; /*  Ширина контейнера (относительно ширины экрана)  */
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Центрирование по горизонтали, отступы сверху и снизу */
+    padding: 20px;
+    background-color: #fff; /* Белый фон для контента */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #333; /* Цвет заголовков */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em; /* Размер заголовка 1 уровня */
+}
+
+h2 {
+    font-size: 2em; /* Размер заголовка 2 уровня */
+}
+
+h3 {
+    font-size: 1.5em; /* Размер заголовка 3 уровня */
+}
+
+/* Параграфы */
+p {
+    margin-bottom: 20px; /* Отступ между параграфами */
+}
+
+/* Ссылки */
+a {
+    color: #007bff; /* Синий цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Кнопки (общий стиль для кнопок) */
+.button {
+    display: inline-block;   /* Чтобы кнопки были на одной строке */
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий  цвет кнопки */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Плавная смена фона при наведении */
+    border: none; /* Убираем рамку */
+    cursor: pointer; /* Меняем курсор при наведении */
+}
+
+.button:hover {
+    background-color: #0056b3; /*  Более темный синий при наведении */
+}
+
+/* Формы (основные стили для форм) */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 98%; /* Почти вся ширина */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 150px;  /* Высота для текстовых полей*/
+}
+
+input[type="submit"] {
+    @extend .button;  /* Используем стили кнопки, но для отправки формы будет лучше сделать отдельный класс*/
+}
+
+/* Изображения */
+img {
+    max-width: 100%; /*  Чтобы изображения не выходили за границы контейнера */
+    height: auto;   /* Чтобы сохранялись пропорции */
+    border-radius: 5px; /* Закругленные углы для изображений */
+    margin-bottom: 15px;
+}
+
+/* Навигационное меню (пример) */
+nav {
+    background-color: #333; /* Темный фон меню */
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none; /* Убираем маркеры у списка */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Центрируем пункты меню */
+}
+
+nav li {
+    display: inline-block; /* Отображаем пункты меню горизонтально */
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Футер (подвал сайта) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/*  Классы для разных секций (пример)  */
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.section-primary {
+    background-color: #e9ecef;  /* Светло-серый фон для секций */
+}
+
+.section-secondary {
+    background-color: #dee2e6; /*  Более темный светло-серый фон для секций */
+}
+
+/* Адаптивность (медиа-запросы - для небольших экранов) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /*  Уменьшаем ширину контента на маленьких экранах */
+    }
+
+    h1 {
+        font-size: 2em; /*  Уменьшаем размер заголовков */
+    }
+
+    nav ul {
+        text-align: left; /*  Возвращаем пункты меню к выравниванию по левому краю */
+    }
+
+    nav li {
+        margin: 0 10px;  /* Уменьшаем отступы между пунктами меню */
+    }
+}
+ 
